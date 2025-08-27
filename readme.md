@@ -60,3 +60,11 @@ docker push 513993748676.dkr.ecr.us-east-1.amazonaws.com/roboshop/catalogue:late
 ```
 docker push ${ACC_ID}.dkr.ecr.us-east-1.amazonaws.com/${PROJECT}/${COMPONENT}:${appVersion}
 ```
+
+
+### Install Plugins
+* pipeline : aws steps
+* pipeline utility steps
+* aws credentials
+* ansicolor
+* pipeline stage view

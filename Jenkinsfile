@@ -7,7 +7,8 @@ pipeline{
         appVersion = ''
         REGION = 'us-east-1'
         PROJECT = 'roboshop' 
-    }
+        COMPONENT = 'catalogue'
+    }   
     options{
         disableConcurrentBuilds()
     }
