@@ -10,7 +10,6 @@ pipeline{
     }
     options{
         disableConcurrentBuilds()
-        ansiColor('xterm')
     }
     stages{
         stage('Read JSON'){
@@ -59,7 +58,7 @@ pipeline{
     post{
         always{
             echo 'Hello World'
-            emptyDir()
+            deleteDir()
         }
        success{
         echo 'Code Success'
