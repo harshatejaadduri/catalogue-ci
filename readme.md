@@ -2,22 +2,29 @@
 It is a Developers repo and in this repo continous intergration for components will take place and things like new versions and bug fixes will checkout here and code will be cloned by devops team and do the further proceedings like unit testing, functional testing etc and if any thing goes wrong they report to concern Developers.
 
 * In this case of CI Code
-![screenshot1](catalogue-ci\prebuild.png)
+### 1. Prebuild
+![Prebuild Job](catalogue-ci/prebuild.png)
 
 we are creating a prebuild job which includes environmental variables, agent which is connecting and some options
 
-![screenshot2](catalogue-ci\reading package.png)
+### 2. Reading Package Version
+![Reading Package Version](catalogue-ci/reading-package.png)
 
 here we are updating code version and giving it to appVerison which helps to build docker image with that version
 
-![screenshot3](catalogue-ci\install dependencies.png)
+### 3. Installing Dependencies
+![Installing Dependencies](catalogue-ci/install-dependencies.png)
 
 here we are installing code dependencies
 
-![screenshot4](catalogue-ci\pushing to ecr.png)
+### 4. Pushing to ECR
+![Pushing to ECR](catalogue-ci/pushing-to-ecr.png)
 
 after building docker image sourcing version from the code we are pushing it to ECR 
 
+
+
+## CI/CD Pipeline
 
 ## Push Commands for ECR
 ### Assign Variables
