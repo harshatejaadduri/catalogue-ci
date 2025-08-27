@@ -35,6 +35,8 @@ appVersion=''
 REGION=us-east-1
 
 ```
+
+```
 aws ecr get-login-password --region ${REGION} | docker login --username AWS --password-stdin ${ACC_ID}.dkr.ecr.us-east-1.amazonaws.com
 ```
 
@@ -43,6 +45,7 @@ aws ecr get-login-password --region ${REGION} | docker login --username AWS --pa
 ```
 docker build -t 513993748676.dkr.ecr.us-east-1.amazonaws.com/roboshop/catalogue:latest
 ```
+
 ```
 docker build -t ${ACC_ID}.dkr.ecr.us-east-1.amazonaws.com/${PROJECT}/${COMPONENT}:${appVersion} .
 ```
@@ -53,6 +56,7 @@ docker build -t ${ACC_ID}.dkr.ecr.us-east-1.amazonaws.com/${PROJECT}/${COMPONENT
 ```
 docker push 513993748676.dkr.ecr.us-east-1.amazonaws.com/roboshop/catalogue:latest
 ```
+
 ```
 docker push ${ACC_ID}.dkr.ecr.us-east-1.amazonaws.com/${PROJECT}/${COMPONENT}:${appVersion}
 ```

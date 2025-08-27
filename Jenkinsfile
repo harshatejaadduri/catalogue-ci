@@ -1,6 +1,6 @@
 pipeline{
     agent{
-        labels 'AGENT-1'
+        label 'AGENT-1'
     }
     environment{
         ACC_ID ='513993748676'
@@ -39,9 +39,22 @@ pipeline{
                             docker build -t ${ACC_ID}.dkr.ecr.us-east-1.amazonaws.com/${PROJECT}/${COMPONENT}:${appVersion} .
                             docker push ${ACC_ID}.dkr.ecr.us-east-1.amazonaws.com/${PROJECT}/${COMPONENT}:${appVersion}
                             """
-                        }      
-                }
+                }      
+            }
         }
+        stage('Trigger Deploy'){
+            when{
+                    expression{params.deploy_to == 'dev'}
+                    }
+            steps {
+                script{
+                    build job: 'catalogue-cd', 
+                    wait: false
+                }
+                
+            }
+        }
+        
     }
     post{
         always{
