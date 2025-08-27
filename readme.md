@@ -3,22 +3,22 @@ It is a Developers repo and in this repo continous intergration for components w
 
 * In this case of CI Code
 ### 1. Prebuild
-![Prebuild Job](catalogue-ci/prebuild.png)
+![Prebuild Job](https://github.com/user-attachments/assets/46f2d1b3-b753-4cfe-81e4-d5647313e629)
 
 we are creating a prebuild job which includes environmental variables, agent which is connecting and some options
 
 ### 2. Reading Package Version
-![Reading Package Version](catalogue-ci/reading-package.png)
+![Reading Package Version](https://github.com/user-attachments/assets/57707eeb-0505-474c-b793-e58c6f9bbb9a)
 
 here we are updating code version and giving it to appVerison which helps to build docker image with that version
 
 ### 3. Installing Dependencies
-![Installing Dependencies](catalogue-ci/install-dependencies.png)
+![Installing Dependencies](https://github.com/user-attachments/assets/2eddcbd5-7681-4a35-82a9-ebe90e027ee2)
 
 here we are installing code dependencies
 
 ### 4. Pushing to ECR
-![Pushing to ECR](catalogue-ci/pushing-to-ecr.png)
+![Pushing to ECR](https://github.com/user-attachments/assets/24fcc060-b479-4c1b-94ec-1f88b04a6273)
 
 after building docker image sourcing version from the code we are pushing it to ECR 
 
