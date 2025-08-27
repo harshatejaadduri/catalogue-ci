@@ -41,7 +41,6 @@ pipeline{
                             """
                     }      
                 }
-                
             }
         }
         stage('Trigger Deploy'){
@@ -53,10 +52,8 @@ pipeline{
                     build job: 'catalogue-cd', 
                     wait: false
                 }
-                
             }
-        }
-        
+       }
     }
     post{
         always{
