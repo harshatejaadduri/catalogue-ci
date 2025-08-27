@@ -3,11 +3,11 @@ pipeline{
         label 'AGENT-1'
     }
     environment{
-        ACC_ID ='513993748676'
+        ACC_ID = "513993748676"
         appVersion = ''
-        REGION = 'us-east-1'
-        PROJECT = 'roboshop' 
-        COMPONENT = 'catalogue'
+        REGION = "us-east-1"
+        PROJECT = "roboshop"
+        COMPONENT = "catalogue"
     }   
     options{
         disableConcurrentBuilds()
