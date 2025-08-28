@@ -55,7 +55,7 @@ pipeline{
                 script{
                     build job: 'catalogue-cd',
                     parameters: [
-                        string(name: 'appVersion', value: "${appVersion}")
+                        string(name: 'appVersion', value: "${appVersion}"),
                         string(name: 'deploy_to', value: 'dev')
                           ],
                     wait: false
