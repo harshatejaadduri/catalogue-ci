@@ -12,6 +12,9 @@ pipeline{
     options{
         disableConcurrentBuilds()
     }
+    parameters{
+        booleanParam(name: 'deploy', defaultValue: false, description: 'Toggle this value')
+    }
     stages{
         stage('Read JSON'){
             steps{
@@ -46,7 +49,7 @@ pipeline{
         }
         stage('Trigger Deploy'){
             when{
-                    expression{params.deploy_to == 'dev'}
+                    expression{ params.deploy }
                     }
             steps {
                 script{
