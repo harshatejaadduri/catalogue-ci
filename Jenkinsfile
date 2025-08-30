@@ -37,6 +37,8 @@ pipeline{
         stage('sonar scan'){
             environment {
                 scannerHome = tool 'Sonar'
+                SONAR_TOKEN = credentials('sonar-token')
+
             }
             steps{
                 script{
