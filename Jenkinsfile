@@ -34,15 +34,16 @@ pipeline{
                 }
             }
         }
-        stage('sonar scan'){
+        stage('Sonar Scan') {
             environment {
-                scannerHome = tool 'Sonar'
+                scannerHome = tool 'sonar-7.2'
             }
-            steps{
-                script{
-                     withSonarQubeEnv(installationName: 'Sonar'){
-                    sh "${scannerHome}/bin/sonar-scanner"
-                }
+            steps {
+                script {
+                   // Sonar Server envrionment
+                   withSonarQubeEnv(installationName: 'sonar-7.2') {
+                         sh "${scannerHome}/bin/sonar-scanner"
+                   }
                 }
             }
         }
