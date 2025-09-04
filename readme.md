@@ -68,3 +68,12 @@ docker push ${ACC_ID}.dkr.ecr.us-east-1.amazonaws.com/${PROJECT}/${COMPONENT}:${
 * aws credentials
 * ansicolor
 * pipeline stage view
+
+
+### Git Hub Dependabot Alerts
+```
+curl -L \
+  -H "Accept: application/vnd.github+json" \
+  -H "Authorization: Bearer <YOUR-TOKEN>" \
+  https://api.github.com/harshatejaadduri/catalogue-ci/dependabot/alerts/
+```  
